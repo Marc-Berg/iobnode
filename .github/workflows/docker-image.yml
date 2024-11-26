@@ -28,8 +28,8 @@ jobs:
             ${{ runner.os }}-buildx-
 
       # Set up QEMU for multi-platform builds
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
+     # - name: Set up QEMU
+       # uses: docker/setup-qemu-action@v2
 
       # Log in to Docker Hub
       - name: Log in to Docker Hub
