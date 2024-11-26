@@ -3,7 +3,7 @@ FROM debian:bookworm-slim
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
-ENV NODE_VERSION 20.18.0
+ENV NODE_VERSION=20.18.0
 
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
     && case "${dpkgArch##*-}" in \
@@ -55,7 +55,7 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
     && node --version \
     && npm --version
 
-ENV YARN_VERSION 1.22.19
+ENV YARN_VERSION=1.22.19
 
 RUN set -ex \
   && savedAptMark="$(apt-mark showmanual)" \
