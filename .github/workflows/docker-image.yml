@@ -38,7 +38,6 @@ jobs:
           push: false
           file: ./bookworm/Dockerfile
           tags: marcberg/nodeiob:latest
-          platforms: linux/amd64,linux/arm64
 
       # Push Docker image with tags
       - name: Push Docker image
