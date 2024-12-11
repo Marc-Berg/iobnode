@@ -3,13 +3,16 @@ FROM debian:bookworm-slim
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
-ENV NODE_VERSION=20.18.1
+ENV NODE_VERSION=20.18.0
 
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
     && case "${dpkgArch##*-}" in \
       amd64) ARCH='x64';; \
+      ppc64el) ARCH='ppc64le';; \
+      s390x) ARCH='s390x';; \
       arm64) ARCH='arm64';; \
       armhf) ARCH='armv7l';; \
+      i386) ARCH='x86';; \
       *) echo "unsupported architecture"; exit 1 ;; \
     esac \
     && set -ex \
