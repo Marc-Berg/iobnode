@@ -16,7 +16,7 @@ jobs:
 
       # Set up Docker Buildx for building images
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3.11.0
+        uses: docker/setup-buildx-action@v3.11.1
 
       # Log in to Docker Hub
       - name: Log in to Docker Hub
