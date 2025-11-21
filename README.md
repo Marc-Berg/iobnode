@@ -15,7 +15,7 @@ A Docker-based development environment for ioBroker developers with SSH access, 
 
 ### Included Software
 
-- **Node.js**: Version 20.19.1
+- **Node.js**: Version 22
 - **npm**: Bundled with Node.js
 - **Yarn**: Version 1.22.19
 - **@iobroker/dev-server**: Globally installed
