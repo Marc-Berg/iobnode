@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y \
     openssh-server gcc g++ make git vim curl sudo libcap2-bin \
     && rm -rf /var/lib/apt/lists/*
 
-RUN npm install --global @iobroker/dev-server
+RUN npm install --global @iobroker/dev-server@latest
 
 RUN useradd -ms /bin/bash iobdev
 
