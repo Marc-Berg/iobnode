@@ -16,8 +16,12 @@ USER_SSH_KEYS_FOLDER=~/.ssh
 #unset SSH_PUBLIC_KEY
 
 echo "Starting git config"
-git config --global user.name $GIT_USERNAME
-git config --global user.email $GIT_EMAIL
+if [ -z "$GIT_USERNAME" ] || [ -z "$GIT_EMAIL" ]; then
+  echo "ERROR: GIT_USERNAME and GIT_EMAIL environment variables must be set"
+  exit 1
+fi
+git config --global user.name "$GIT_USERNAME"
+git config --global user.email "$GIT_EMAIL"
 
 echo "Starting the sshd daemon"
 /usr/sbin/sshd -D
