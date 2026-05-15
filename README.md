@@ -24,7 +24,7 @@ A Docker-based development environment for ioBroker developers with SSH access, 
 
 ### System Setup
 
-- **Base OS**: Debian Bookworm Slim
+- **Base OS**: Debian Trixie Slim
 - **Main User**: `node` (UID: 1000, GID: 1000)
 - **Dev User**: `iobdev` (for development work)
 - **Architecture**: Multi-arch support (amd64, arm64, armhf, etc.)
@@ -368,7 +368,7 @@ npm run lint
 
 The Dockerfile implements:
 
-1. **Base Setup**: Debian Bookworm Slim
+1. **Base Setup**: Debian Trixie Slim
 1. **Node.js Installation**: Secure verification with GPG
 1. **Yarn Installation**: Package manager for better dependency management
 1. **Development Tools**: Compilers and Git tools
