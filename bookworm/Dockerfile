@@ -8,8 +8,6 @@ RUN npm install --global @iobroker/dev-server@latest
 
 RUN useradd -ms /bin/bash iobdev
 
-RUN mkdir /var/run/sshd
-
 EXPOSE 22
 EXPOSE 8081
 
