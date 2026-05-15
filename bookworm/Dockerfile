@@ -1,4 +1,4 @@
-FROM node:22-bookworm-slim
+FROM node:22-trixie-slim
 
 RUN apt-get update && apt-get install -y \
     openssh-server gcc g++ make git vim curl sudo libcap2-bin \
